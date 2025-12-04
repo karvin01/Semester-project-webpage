@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Eagle+Lake&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
     /* Dimensions */ 
@@ -12,6 +14,7 @@
     --background_color_navigation: #8FBFA099;
     --clicked_color_navigation: #406AA2;
     --menu_color_navigation: #E1EDF1;
+    --background_color_green: #214830;
 }
 
 
@@ -156,21 +159,39 @@ body, html{
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: -50px;
 }
 
 /*quote area*/
 
 .quote_area{
     background-color: var(--menu_color_navigation);
+    padding: 50px 0 50px 0;
 }
 
 .quote_area img {
-    width: 100%;
+    width: var(--width-12col);
     height: auto;
     background-size: cover;
     background-position: center center;
     display: flex;
-    justify-content: center;
-    position: relative; 
+    align-items: center;
+    margin: 0 auto;
+}
+
+.quote_area p {
+    font-family: 'Eagle Lake', cursive;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/*video area*/
+.video_area {
+    width: 100%;
+    height: 620px;
+    background-color:var(--background_color_green) ;
+}
+/*footer area*/
+.footer {
+    background: url("../images/footer.png")
 }
