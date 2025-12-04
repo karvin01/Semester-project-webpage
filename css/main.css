@@ -1,0 +1,145 @@
+
+:root{
+    /* Dimensions */ 
+    --width_full: 100%;
+
+    /*Color*/
+    --background_color_navigation: #8FBFA099;
+    --clicked_color_navigation: #406AA2;
+    --menu_color_navigation: #E1EDF1;
+}
+
+
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: var(--width_full);
+    font-family: ;
+    position: relative; 
+    height: 100%;
+    margin: 0;
+}
+
+.navigation, .hero, .image-section, .footer{
+    width: var(--width_full)
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: var(--width_full);
+}
+
+/*navigation*/
+.navigation{
+    background-color: var(--background_color_navigation);
+    padding:10px 0 10px 0;
+    position: absolute;
+    z-index:10;
+    width: var(--width_full);;
+}
+
+.navigation.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu_logo {
+    margin-left: 40px;
+}
+
+.menu_logo img{
+    max-width: 260px;
+}
+
+.menu-container{
+    margin-right: 40px;
+}
+
+.menu-container ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-container a{
+    padding: 0 10px;
+    text-decoration: none;
+    color: var(--menu_color_navigation);
+    text-transform: uppercase;
+}
+
+.menu-container{
+    display: flex;
+    align-items: center;
+}
+
+.clicked {
+    color: var(--clicked_color_navigation)
+}
+
+/*header area*/
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 160px;
+    background: linear-gradient(to top, var(--menu_color_navigation), transparent);
+}
+
+/*content invite area*/
+.invite_area {
+    background-color: var(--menu_color_navigation);
+}
+
+.invite_area img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+/*quote area*/
+
+.quote_area{
+    background-color: var(--menu_color_navigation);
+}
+
+.quote_area img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    position: relative; 
+}
