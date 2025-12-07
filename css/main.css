@@ -17,6 +17,7 @@
     --background_color_green: #214830;
     --ticket_font_color: #511100;
     --ticket_button_color: #F5F5F5;
+    --headline_hero_color: #000000;
 }
 
 
@@ -146,6 +147,44 @@ body, html{
     bottom: 0;
     height: 160px;
     background: linear-gradient(to top, var(--menu_color_navigation), transparent);
+}
+
+.hero_text {
+    position: absolute;
+    left: 15%;
+    top: 15%;
+}
+
+.hero_text h2{
+    font-family: 'Eagle Lake';
+    font-size: 96px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    line-height: 1;
+    padding-left: 60px;
+}
+
+.hero_text h1{
+    font-family: 'Eagle Lake';
+    font-size: 128px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    line-height: 1;
+}
+
+.hero_text h1 span {
+    padding-left: 210px;
+}
+
+.hero_text h3 {
+    font-family: 'Eagle Lake';
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 12px;
+    padding-top: 20px;
 }
 
 /*content invite area*/
