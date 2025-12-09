@@ -73,6 +73,7 @@ body, html{
     top: 0;
     width: 100%;
     z-index: 1000;
+    height: 100px;
 }
 
 .navigation_width_setting {
@@ -103,15 +104,19 @@ body, html{
 }
 
 .menu-container a{
-    padding: 0 10px;
-    text-decoration: none;
+    padding: 0 30px;
+    text-decoration: underline;
+    font-family: 'Afacad';
     color: var(--menu_color_navigation);
     text-transform: uppercase;
-    
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 1px 1px 0 black;
 }
 
 .clicked {
-    color: var(--clicked_color_navigation) !important
+    color: var(--clicked_color_navigation) !important;
+    font-weight: 700;
 }
 
 /*header area*/
@@ -151,6 +156,11 @@ body, html{
     left: 50%;
     transform: translate(-50%);
     padding-right: 15%;
+    text-shadow: 
+    -2px -2px 0 var(--white_color),
+     2px -2px 0 var(--white_color),
+    -2px  2px 0 var(--white_color),
+     2px  2px 0 var(--white_color);
 }
 
 .hero_text h2{
@@ -305,6 +315,11 @@ body, html{
     font-size: 48px;
     text-align: center;
     font-weight: 400;
+    text-shadow: 
+    -2px -2px 0 var(--white_color),
+     2px -2px 0 var(--white_color),
+    -2px  2px 0 var(--white_color),
+     2px  2px 0 var(--white_color);
 }
 
 /*video area*/
@@ -318,14 +333,11 @@ body, html{
     background-color: var(--menu_color_navigation);
     position: relative;
     width: 100%;
-}
-
-.footer_image img{
-    width: 100%;
-    display: block;
-    position: static;
+    background-image: url('../images/footer.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 450px;
 }
 
 .footer_info{
@@ -342,12 +354,16 @@ body, html{
 }
 
 .musikhuset {
+    height: 56px;
     max-height: 56px;
+    width: auto;
     grid-column: 1/3;
 }
 
 .skarn {
+    height: 45px;
     max-height: 45px;
+    width: auto;
     grid-column: 3/6;
 }
 
