@@ -32,6 +32,7 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: #E1EDF1;
 }
 
 body, html{
@@ -105,7 +106,7 @@ body, html{
 
 .menu-container a{
     padding: 0 30px;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: 'Afacad';
     color: var(--menu_color_navigation);
     text-transform: uppercase;
@@ -426,4 +427,187 @@ body, html{
     font-weight: 500;
     color:var(--ticket_button_color) ;
     text-decoration: none;
+}
+
+/* contact page */
+
+
+
+.contact_about {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1200px;     
+    margin: 0 auto; 
+    padding: 130px 0 20px 0;       
+    gap: 20px;
+    align-items: center;
+
+}
+
+.about_text {
+    grid-column: 5 / span 4;
+    
+}
+
+.about_text h2 {
+   font-family: 'Eagle Lake';
+    font-size: 65px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
+   
+}
+
+.text_about_block {
+   grid-column: 3 / span 8;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+    font-family: 'Afacad';
+
+}
+
+/* carousel section */
+.photo_carousel {
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+.photo_carousel input {
+    display: none;
+}
+
+.photo_carousel_inside {
+    width: 500%;
+    display: flex;
+    transition: 1s;
+}
+
+.photo_carousel_item {
+    width: 20%;
+    padding: 30px;
+}
+
+.photo_carousel_item img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#photo1:checked ~ .photo_carousel_inside {
+    transform: translateX(0%);
+}
+
+#photo2:checked ~ .photo_carousel_inside {
+    transform: translateX(-20%);
+}
+
+#photo3:checked ~ .photo_carousel_inside {
+    transform: translateX(-40%);
+}
+
+#photo4:checked ~ .photo_carousel_inside {
+    transform: translateX(-60%);
+}
+
+#photo5:checked ~ .photo_carousel_inside {
+    transform: translateX(-80%);
+}
+.overlay {
+    background-color: #E1EDF1;
+    width: 2800px ; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.left_overlay {
+    left: 0;
+    transform: translateX(-100%); 
+}
+
+.right_overlay {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.arrow {
+    background-color: #ffffff;
+    position: absolute;
+    top: 45%;
+    font-size: 30px;
+    width: 30px;
+    height: 60px;
+    border-radius: 30%;
+    display: none; 
+    padding-top: 15px;
+    z-index: 3;
+}
+
+.arrow:hover {
+    background-color: var(--clicked_color_navigation);
+}
+
+.left {
+    left: -50px;
+}
+
+.right {
+    right: -50px;
+}
+
+#photo1:checked ~ .arrow_left_photo1, #photo1:checked ~ .arrow_right_photo1 {
+    display: block;
+}
+#photo2:checked ~ .arrow_left_photo2, #photo2:checked ~ .arrow_right_photo2 {
+    display: block;
+}
+#photo3:checked ~ .arrow_left_photo3, #photo3:checked ~ .arrow_right_photo3 {
+    display: block;
+}
+#photo4:checked ~ .arrow_left_photo4, #photo4:checked ~ .arrow_right_photo4 {
+    display: block;
+}
+#photo5:checked ~ .arrow_left_photo5, #photo5:checked ~ .arrow_right_photo5 {
+    display: block;
+}
+
+
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dots label { 
+    background-color: #cecece;
+    width: 13px;
+    height: 13px;
+    margin: 0 5px;
+    border-radius: 7px;
+   
+}
+
+#photo1:checked ~ .dots .dot1,
+#photo2:checked ~ .dots .dot2,
+#photo3:checked ~ .dots .dot3,
+#photo4:checked ~ .dots .dot4,
+#photo5:checked ~ .dots .dot5 {
+    background-color: var(--clicked_color_navigation);
+}
+
+.section_breaker img {
+display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 10px  0;       
+    gap: 20px;
+    align-items: center;     
 }
