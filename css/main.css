@@ -446,13 +446,14 @@ body, html{
 }
 
 .about_text {
-    grid-column: 5 / span 4;
+    grid-column: 1 / span 12;
+    text-align: center;
     
 }
 
 .about_text h2 {
    font-family: 'Eagle Lake';
-    font-size: 65px;
+    font-size: 50px;
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
@@ -602,6 +603,10 @@ body, html{
     background-color: var(--clicked_color_navigation);
 }
 
+
+
+/* donation section */
+
 .section_breaker img {
 display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -610,4 +615,123 @@ display: grid;
     padding: 10px  0;       
     gap: 20px;
     align-items: center;     
+}
+
+.about_text_donation {
+    grid-column: 1 / span 12;
+    text-align: center;
+    
+}
+
+.about_text_donation h2 {
+   font-family: 'Eagle Lake';
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
+   
+}
+.donation {
+    display: grid;
+     grid-template-columns: repeat(12, 1fr);
+    max-width: 1200px;
+    margin: 0 auto; 
+    gap: 20px;
+
+   
+}
+.image_text_donation {
+ grid-column: 2 / span 11;
+ display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.image_text_donation img {
+grid-column: 2 / span 4; 
+   width: 100%;
+   max-width: 400px;
+    height: auto;
+    display: block;
+
+   
+}
+
+.text_about_block_donation {
+    grid-column: 6/ span 5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+    font-family: 'Afacad';
+    padding: 80px 0 30px 0;
+
+    
+}
+
+.dragon_text {
+    grid-column: 2 / span 4;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.dragon_text img {
+    
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.donation_text_dragon {
+    text-align: center;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+display: flex; 
+flex-direction: column;   
+    gap: 10px;
+
+}
+
+.donation_text_dragon h6 {
+      font-family: 'Eagle Lake';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ticket_font_color);
+    
+
+}
+
+
+
+.donation_text_dragon_button {
+     display: flex;
+    justify-content: center;
+
+}
+
+.donation_text_dragon_button button {
+     background-color: var(--ticket_font_color);
+    border-radius: 5px;
+    height: 32px;
+    width: 170px;
+    border: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.donation_text_dragon_button button a {
+  font-family: 'Afacad';
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:var(--ticket_button_color) ;
+    text-decoration: none;
+}
+
+.donation_text_dragon_button button:hover {
+        background-color: var(--headline_hero_color);
+
 }
