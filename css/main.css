@@ -491,11 +491,12 @@ body, html{
 
 .photo_carousel_item {
     width: 20%;
-    padding: 30px;
+    padding: 50px;
 }
 
 .photo_carousel_item img {
-    width: 100%;
+    width: 600px;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -550,6 +551,8 @@ body, html{
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 3;
+    transition: all 0.3s ease;
+
 }
 
 
@@ -558,6 +561,11 @@ body, html{
 
 .arrow:hover {
     background-color: var(--clicked_color_navigation);
+    width: 40px;
+    height: 70px;
+    line-height: 48px;
+        text-align: center;
+
 }
 
 
@@ -766,7 +774,7 @@ box-sizing: border-box;
 }
 
 .carousel_block img {
- width: 170px;
+ width: 130px;
  height: auto;
 
 }
@@ -802,7 +810,7 @@ font-size: 25px;
 #block_d:checked ~ .arrow_d,
 #block_e:checked ~ .arrow_e,
 #block_f:checked ~ .arrow_f,
-#blocke_g:checked ~.arrow_g {
+#block_g:checked ~.arrow_g {
   display: block;
 }
 
