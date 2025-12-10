@@ -540,27 +540,26 @@ body, html{
 .arrow {
     background-color: #ffffff;
     position: absolute;
-    top: 45%;
+    top: 50%;
     font-size: 30px;
     width: 30px;
     height: 60px;
-    border-radius: 30%;
+    border-radius: 5px;
     display: none; 
     padding-top: 15px;
     z-index: 3;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
 
 .arrow:hover {
     background-color: var(--clicked_color_navigation);
 }
 
-.left {
-    left: -50px;
-}
-
-.right {
-    right: -50px;
-}
 
 #photo1:checked ~ .arrow_left_photo1, #photo1:checked ~ .arrow_right_photo1 {
     display: block;
@@ -735,3 +734,40 @@ flex-direction: column;
         background-color: var(--headline_hero_color);
 
 }
+
+/* carousel 2 */
+
+.carousel_text_image {
+  width: 700px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_text_image input { display: none; }
+
+.carousel_text_image_inside {
+  display: flex;
+  width: 700%;
+  transition: 1s;
+}
+
+.carousel_block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 15%; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel_card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.carousel_text {
+  width: 60%;
+}
+
