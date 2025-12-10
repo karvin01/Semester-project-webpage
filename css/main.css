@@ -547,9 +547,9 @@ body, html{
     border-radius: 5px;
     display: none; 
     padding-top: 15px;
-    z-index: 3;
     transform: translateY(-50%);
     cursor: pointer;
+    z-index: 3;
 }
 
 
@@ -738,13 +738,15 @@ flex-direction: column;
 /* carousel 2 */
 
 .carousel_text_image {
-  width: 700px;
-  margin: 50px auto;
-  position: relative;
-  overflow: hidden;
+     width: 700px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
 }
 
-.carousel_text_image input { display: none; }
+.carousel_text_image input { 
+    display: none; 
+}
 
 .carousel_text_image_inside {
   display: flex;
@@ -753,21 +755,63 @@ flex-direction: column;
 }
 
 .carousel_block {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 15%; 
-  padding: 20px;
-  box-sizing: border-box;
+width: 50%;
+    padding: 30px;
+
 }
 
 .carousel_card img {
-  width: 40px;
-  height: 40px;
-  border-radius: 15px;
+ width: 50px;
+ height: auto;
+    border-radius: 20px;
+
 }
 
 .carousel_text {
   width: 60%;
 }
 
+#block_a:checked ~ .carousel_text_image_inside { transform: translateX(0%); }
+#block_b:checked ~ .carousel_text_image_inside { transform: translateX(-14%); }
+#block_c:checked ~ .carousel_text_image_inside { transform: translateX(-28%); }
+#block_d:checked ~ .carousel_text_image_inside { transform: translateX(-42%); }
+#block_e:checked ~ .carousel_text_image_inside { transform: translateX(-56%); }
+#block_f:checked ~ .carousel_text_image_inside { transform: translateX(-70%); }
+#block_g:checked ~ .carousel_text_image_inside { transform: translateX(-84%); }
+
+
+
+#block_a:checked ~ .arrow_a,
+#block_b:checked ~ .arrow_b,
+#block_c:checked ~ .arrow_c,
+#block_d:checked ~ .arrow_d,
+#block_e:checked ~ .arrow_e,
+#block_f:checked ~ .arrow_f,
+#blocke_g:checked ~.arrow_g {
+  display: block;
+}
+
+.carousel__image_text_dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.carousel__image_text_dots label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+
+#block_a:checked ~ .carousel__image_text_dots .dot_a,
+#block_b:checked ~ .carousel__image_text_dots .dot_b,
+#block_c:checked ~ .carousel__image_text_dots .dot_c,
+#block_d:checked ~ .carousel__image_text_dots .dot_d,
+#block_e:checked ~ .carousel__image_text_dots .dot_e,
+#block_f:checked ~ .carousel__image_text_dots .dot_f,
+#block_g:checked ~ .carousel__image_text_dots .dot_g {
+  background: #406AA2;
+}
