@@ -14,28 +14,31 @@
                 <div class="menu_logo">
                     <img src="images/SKARN22333.png" alt="Skarntyden logo">
                 </div>
-                <div class="menu-container">
-                    <ul class="responsive_navigation">
-                        <li>
-                            <a class="clicked" href="">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                        <li>
-                            <a href="">Tickets</a>
-                        </li>                                                            
-                    </ul>
+                <div class="navbar">
+                    <input type="checkbox" id="sidebar-active">
+                    <label for="sidebar-active" class="open_sidebar_button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+                    </label>
+                    
+                    <label id="overlay" for="sidebar-active"></label>
+                    <div class="links_container">
+                        <label for="sidebar-active" class="close_sidebar_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24"><path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"/></svg>
+                        </label>
+
+                        <a class="clicked" href="">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="">Tickets</a>
+                    </div>                
                 </div>
             </div>    
-        </nav>
+        </nav> 
 
         <!-- Header Area -->
         <header class="hero">
-            <img src="images/hero_image.png">
+            <img src="images/hero_image.png" class="desktop_only">
+            <img src="images/hero_image_responsive.png" class="mobile_only">
             <div class="hero_text">
                 <h2>The</h2> 
                 <h1>Brothers</h1>
@@ -108,5 +111,6 @@
             </div>          
             </div>
         </div>
+        <div class="footer_for_responsive"></div>
     </footer>
 </html>
