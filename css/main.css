@@ -20,6 +20,7 @@
     --headline_hero_color: #000000;
     --white_color: #FFFFFF;
     --popup_navigation: #9CC5AA;
+    --footer_color: #A8C5D8;
 }
 
 
@@ -142,7 +143,7 @@ body, html{
     overflow: hidden;
 }
 
-.hero img {
+.desktop_only {
     width: 100%;
     height: auto;
     background-size: cover;
@@ -150,6 +151,10 @@ body, html{
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.mobile_only {
+    display: none;
 }
 
 .hero::after {
@@ -863,6 +868,7 @@ font-size: 25px;
 
     .navigation_width_setting{
         width: 100%;
+        padding: 0 var(--padding_default);
     }
 
     .navigation.fixed {
@@ -872,7 +878,6 @@ font-size: 25px;
     .menu_logo img {
         max-width: 170px;
         height: auto;
-        padding-left: 20px;
     }
 
     .links_container{
@@ -883,7 +888,7 @@ font-size: 25px;
         top: 0;
         z-index: 10;
         width: 150px;
-        height: 100%;
+        height: 350px;
         background-color: var(--popup_navigation);
         transition: 0.75s ease-in-out;
     }
@@ -901,8 +906,12 @@ font-size: 25px;
 
     .open_sidebar_button, .close_sidebar_button{
         display: block;
-        padding: 25px 20px 22px 0;
+        padding: 25px 0px 22px 0;
         justify-content: flex-end;
+    }
+
+    .close_sidebar_button {
+        padding-right: var(--padding_default);
     }
 
     #sidebar-active:checked ~ .links_container {
@@ -917,6 +926,137 @@ font-size: 25px;
         left: 0;
         z-index: 9;
     }
+
+    /*header start*/
+    .desktop_only {
+        display: none;
+    }
+
+    .mobile_only{
+       width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero_text {
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 0 var(--padding_default);
+        top: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .hero_text h2 {
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-right: 25%;
+        line-height: 1;
+    }
+
+    .hero_text h1 {
+        font-size: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hero_text h1 span {
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-left: 45%;
+    }
+
+    .hero_text h3 {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-top: 20px;
+    }
+    /*header end*/
+    /*invite area start*/
+    .ticket_details{
+        width: 100%;
+        padding: 0 var(--padding_default);
+    }
+
+    .ticket_details_column2 {
+        padding: 0;
+        padding-left: 10px;
+    }
+
+    .ticket_details h6 {
+        font-size: 13px;
+        padding-bottom: 0;
+    }
+
+    .ticket_details h6 span {
+        font-size: 10px;
+    }
+
+    .ticket_details_column1 p, .ticket_details_column2 p,
+    .ticket_details_column1 p span, .ticket_details_column2 p span{
+        font-size: 10px;
+    }
+
+    .ticket_details_button button {
+        width: 115px;
+        height: 25px;
+    }
+
+    .ticket_details_button button a {
+        font-size: 10px;
+    }
+    /*invite area end*/
+    /*quote area end*/
+    .quote_area img {
+        width: 90%;
+    }
+
+    .quote_area p {
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+    /*quote area end*/
+    /*footer area end*/
+    .footer_info{
+        width: 100%;
+    }
+
+    .line {
+        height: 166px;
+    }
+
+    .footer_image {
+        gap: 0;
+    }
+
+    .footer_for_responsive {
+        gap: 0;
+    }
+
+    .footer_for_responsive {
+        width: 100%;
+        height: 150px;
+        background-color: var(--footer_color);
+    }
+    /*footer area end*/
 }
 /*responsive end*/
 
