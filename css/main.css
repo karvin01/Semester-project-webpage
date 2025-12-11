@@ -108,7 +108,7 @@ body, html{
     padding: 0 20px;
     display: flex;
     align-items: center;
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--menu_color_navigation);
     font-size: 24px;
     font-weight: 400;
