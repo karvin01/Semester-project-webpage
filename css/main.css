@@ -912,6 +912,81 @@ font-size: 25px;
   background: #406AA2;
 }
 
+
+/* tickets page */
+
+.top_area {
+
+    margin-top: 120px;
+}
+
+/* venue area */
+
+.venue_text {
+    
+    grid-column: 1 / span 12;
+    text-align: center;
+
+}
+
+.venue_text h2 {
+  
+    font-family: 'Eagle Lake';
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
+   
+}
+
+.venue_container {
+    display: flex;
+    /* ... other styles ... */
+}
+
+.map_section {
+    flex: 0.55; /* Takes up approximately 55% of the card's width */
+    padding: 30px;
+}
+
+.details_section {
+    flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
+    /* ... other styles ... */
+}
+
+.map_pic img {
+
+    height: 427px;
+    width:422px;
+}
+
+
+.venue_info_container {
+
+   
+}
+
+.venue_info_container h2 {
+ font-family: 'Eagle Lake';
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*responsive start*/
 @media (max-width: 675px) {
     .container { 
