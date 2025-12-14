@@ -35,6 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #E1EDF1;
+
 }
 
 body, html{
@@ -74,6 +75,7 @@ body, html{
 .navigation.fixed {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     height: 100px;
@@ -225,7 +227,7 @@ body, html{
     position: relative;
 }
 
-.invite_area img {
+.mobile_and_desktop_only {
     width: 100%;
     height: auto;
     background-size: cover;
@@ -233,6 +235,10 @@ body, html{
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.mobile_smaller {
+    display: none;
 }
 
 .ticket_details {
@@ -308,6 +314,9 @@ body, html{
     width: 170px;
     border: none;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ticket_details_button button a {
@@ -379,6 +388,13 @@ body, html{
     align-items: center;
 }
 
+.footer_info_logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    grid-column: 1/6;
+}
+
 .musikhuset {
     height: 56px;
     max-height: 56px;
@@ -441,6 +457,10 @@ body, html{
     border: none;
 }
 
+.footer_info_button_donate {
+    display: none;
+}
+
 .footer_info_button button a {
     font-family: 'Afacad';
     font-size: 16px;
@@ -448,6 +468,10 @@ body, html{
     font-weight: 500;
     color:var(--ticket_button_color) ;
     text-decoration: none;
+}
+
+.footer_for_responsive {
+    display: none;
 }
 
 /* About Page */
@@ -1000,6 +1024,7 @@ font-size: 25px;
 
     .navigation.fixed {
         max-height: 80px;
+        position: static;
     }
 
     .menu_logo img {
@@ -1060,7 +1085,7 @@ font-size: 25px;
     }
 
     .mobile_only{
-       width: 100%;
+        width: 100%;
         height: auto;
         background-size: cover;
         background-position: center center;
@@ -1074,7 +1099,7 @@ font-size: 25px;
         left: 0;
         transform: none;
         padding: 0 var(--padding_default);
-        top: 25%;
+        top: 10%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1115,6 +1140,10 @@ font-size: 25px;
         align-items: center;
         padding: 0;
         padding-top: 20px;
+    }
+
+     .hero::after {
+        height: 120px;
     }
     /*header end*/
     /*invite area start*/
@@ -1164,27 +1193,174 @@ font-size: 25px;
     /*footer area end*/
     .footer_info{
         width: 100%;
+        top: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .line {
-        height: 166px;
+        height: 200px;
+        width: 3px;
     }
 
     .footer_image {
-        gap: 0;
+        background-image: url('../images/mobil_footer.png');
+        position: relative;
+        width: 100%;
+        height: 440px;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
     }
-
     .footer_for_responsive {
-        gap: 0;
-    }
-
-    .footer_for_responsive {
+        display: block;
         width: 100%;
         height: 150px;
         background-color: var(--footer_color);
     }
+
+    .footer_info_logos {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+    }
+
+    .footer_info_button_donate {
+        display: block;
+        background-color: var(--clicked_color_navigation);
+        border-radius: 10px;
+        height: 45px;
+        width: 250px;
+        border: none;
+    }
+
+    .footer_info_button_donate button {
+        background-color: var(--clicked_color_navigation);
+        border-radius: 10px;
+        height: 45px;
+        width: 250px;
+        border: none;
+    }
+
+    .footer_info_button_donate button a {
+        font-family: 'Afacad';
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color:var(--ticket_button_color) ;
+        text-decoration: none;
+    }
+    
+    .footer_info2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-left: 20px;
+    }
     /*footer area end*/
-}
+    }
+    
+@media (max-width: 475px) {
+    /*header area start*/
+    .hero_text h2 {
+        font-size: 32px;
+    }
+
+    .hero_text h1 {
+        font-size: 48px;
+    }
+
+    .hero_text h1 span {
+        font-size: 32px;
+    }
+
+    .hero_text h3 {
+        font-size: 8px;
+        padding-top: 10px;
+        letter-spacing: 7px;
+    }
+
+    .hero::after {
+        height: 70px;
+    }
+    /*header area end*/
+    /*invite area start*/
+    .mobile_and_desktop_only{
+        display: none;
+    }
+
+    .mobile_smaller {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        position: relative;  
+    }
+
+    .ticket_details h6 {
+        font-size: 10px;
+    }
+
+    .ticket_details h6 span {
+        font-size: 8px;
+    }
+
+    .ticket_details_column1 p, .ticket_details_column2 p,
+    .ticket_details_column1 p span, .ticket_details_column2 p span {
+        font-size: 8px;
+    }
+
+    .ticket_details_button button {
+        width: 100px;
+        height: 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ticket_details_button button a {
+        font-size: 8px;
+    }
+    /*invite area end*/
+    /*quote area start*/
+    .quote_area p {
+        font-size: 16px;
+    }
+    /*quote area end*/
+    /*footer area start*/
+    .line {
+        display: none;
+    }
+
+    .footer_for_responsive {
+        height: 300px;
+    }
+
+    .footer_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 115%;
+    }
+
+    .footer_info_logos {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .footer_info2 {
+        padding: 0;
+        gap: 30px;
+        padding-top: 20px;
+    }
+
+    /*footer area end*/
+    }
 /*responsive end*/
 
 
