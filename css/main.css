@@ -139,6 +139,22 @@ body, html{
     font-weight: 700;
 }
 
+.headline_info_socials {
+    display: flex;
+    flex-direction: row;
+}
+.headline_info_socials_facebook, .headline_info_socials_instagram {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.headline_info_socials_facebook svg, .headline_info_socials_instagram svg {
+    color: var(--clicked_color_navigation);
+    max-height: 30px;
+}
+
 /*header area*/
 .hero {
     position: relative;
@@ -647,8 +663,8 @@ body, html{
     padding-top: 15px;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 3;
     transition: all 0.3s ease;
+    z-index: 3;
 
 }
 
@@ -661,7 +677,7 @@ body, html{
     width: 40px;
     height: 70px;
     line-height: 48px;
-        text-align: center;
+    text-align: center;
 
 }
 
@@ -691,7 +707,7 @@ body, html{
 }
 
 .dots label { 
-    background-color: #cecece;
+    background-color: #d3d2d2;
     width: 13px;
     height: 13px;
     margin: 0 5px;
@@ -800,7 +816,7 @@ flex-direction: column;
 
 }
 
-.donation_text_dragon h6 {
+.donation_text_dragon h3 {
       font-family: 'Eagle Lake';
     font-size: 16px;
     font-weight: 400;
@@ -836,14 +852,14 @@ flex-direction: column;
 }
 
 .donation_text_dragon_button button:hover {
-        background-color: var(--headline_hero_color);
+    background-color: var(--headline_hero_color);
 
 }
 
 /* carousel 2 */
 
 .carousel_text_image {
-     width: 700px;
+    width: 700px;
     margin: 0 auto;
     padding: 10px 0;
     position: relative;
@@ -861,9 +877,9 @@ flex-direction: column;
 }
 
 .carousel_block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+display: flex;
+align-items: center;
+gap: 20px;
 width: 50%;
 padding: 90px;
 box-sizing: border-box;
@@ -922,8 +938,8 @@ font-size: 25px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ccc;
-  cursor: pointer;
+  background: #d3d2d2;
+ 
 }
 
 #block_a:checked ~ .carousel__image_text_dots .dot_a,
