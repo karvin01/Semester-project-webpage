@@ -981,17 +981,16 @@ font-size: 25px;
 
 .venue_container {
     display: flex;
-    /* ... other styles ... */
+   
 }
 
 .map_section {
-    flex: 0.55; /* Takes up approximately 55% of the card's width */
+    flex: 0.55;
     padding: 30px;
 }
 
 .details_section {
-    flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
-    /* ... other styles ... */
+    flex: 0.45; 
 }
 
 .map_pic img {
