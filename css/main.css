@@ -1161,6 +1161,20 @@ font-size: 25px;
 
 /* tickets page */
 
+.grid_tickets {
+    width: var(--width_full);
+    max-width: var(--width-12col);
+    margin: 0 auto;
+
+}
+
+.grid_tickets_venue {
+width: var(--width_full);
+    max-width: var(--width-12col);
+    margin: 0 auto;
+    
+}
+
 .top_area {
 
     margin-top: 120px;
@@ -1184,15 +1198,22 @@ font-size: 25px;
     margin: 0;
 }
 
-.venue_container {
-    display: flex;
-    /* ... other styles ... */
+/* map area */
+
+.map_container {
+display: grid;
+ grid-template-columns: repeat(12, 1fr);   
 }
 
-.map_section {
-    flex: 0.55; /* Takes up approximately 55% of the card's width */
-    padding: 30px;
+.map {
+grid-column: 2/ span 4;
+    margin-top: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px;  
+    overflow: hidden; 
 }
+
+/* detail area */
 
 .details_section {
     flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
@@ -1210,13 +1231,39 @@ font-size: 25px;
 .venue_info_container h2 {
  font-family: 'Eagle Lake';
     font-size: 36px;
-    font-weight: 400;
-    color: var(--headline_hero_color);
-    margin: 0;
+    font-weight: 200;
 }
 
+.venue_address {
 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 5px 0; 
+    margin: 5px 0;
+    margin-top: 30px;
+}
+.venue_address p {
+    font-family: 'afacad';
+    font-size: 24px;
+    font-weight: 200;
+    text-shadow: none;
+    letter-spacing: 0;
+    
 
+}
+
+.location_icon svg {
+   
+    width: 30px;   
+    height: 30px;  
+    margin-right: 8px;     
+}
+
+.google_maps_button {
+
+    
+}
 
 
 /*responsive start*/
