@@ -15,6 +15,7 @@
     --clicked_color_navigation: #406AA2;
     --menu_color_navigation: #E1EDF1;
     --background_color_green: #214830;
+    --text_highlight_blue: #406AA2;
     --ticket_font_color: #511100;
     --ticket_button_color: #F5F5F5;
     --headline_hero_color: #000000;
@@ -70,6 +71,7 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .navigation.fixed {
@@ -376,18 +378,34 @@ body, html{
 
 /*video area*/
 .video_area {
-    width: 100%;
-    height: 620px;
-    background-color:var(--background_color_green) ;
+    width: 95%;
+    height: auto;
+    background-color:var(--menu_color_navigation) ;
+    display: flex;
+    justify-content: center;
 }
+
+.video_container {
+    width: 100%;
+    max-width: var(--width-12col);
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+/*video area end*/
 /*footer area*/
+.footer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
 .footer_image {
     position: relative;
     width: 100%;
-    height: 440px;
+    height: 100%;
     background-image: url('../images/footer.png');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
@@ -396,10 +414,10 @@ body, html{
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid_gap); 
     width: var(--width-12col);
-    height: 40%;
+    height: 30%;
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 85%;
     transform: translate(-50%, -50%);
     align-items: center;
 }
@@ -435,8 +453,15 @@ body, html{
     grid-column: 7/7;
 }
 
-.footer_info_socials {
-    grid-column: 8/10;    
+.footer_info_right {
+    display: contents;
+}
+
+.footer_info2 {
+    grid-column: 8/10;  
+}
+
+.footer_info_socials {  
     display: flex;
     flex-direction: column;
 }
@@ -491,63 +516,302 @@ body, html{
 }
 
 /* About Page */
-
-.about_the_play {
-    text-align: center;
-    padding: 100px var(--padding_default) 40px; 
-    background-image: url(../images/header_horses.png);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-}
-
 .about_the_play_heading {
-    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    min-height: 800px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
-.about_the_play_heading h2 {
-    
-    font-family: 'Eagle Lake', serif;
-    font-size: 5rem;
-    line-height: 0.8;
+.about_the_play_img_01 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.desktop_horses {
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.mobile_horses {
+    display: none;
+}
+
+.about_the_play_img_02 {
+    position: absolute;
+    top: 17%;           
+    left: 50%;          
+    margin-left: 90px; 
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about_the_play_img_02 img {
+    width: 150px;
+    height: auto;
+}
+
+.about_the_play_heading_text {
+    position: absolute;
+    top: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-12col);
+    left: 50%;
+    transform: translate(-50%);
+    padding-right: 15%;
+    text-shadow: 
+    -2px -2px 0 var(--white_color),
+     2px -2px 0 var(--white_color),
+    -2px  2px 0 var(--white_color),
+     2px  2px 0 var(--white_color);
+}
+
+.about_the_play_heading_text h2{
+    font-family: 'Eagle Lake';
+    font-size: 36px;
     font-weight: 400;
-    color: var(--heading_color);
-    text-shadow:
-        -1px -1px 0 var(--background_color_page),
-        1px -1px 0 var(--background_color_page),
-        -1px 1px 0 var(--background_color_page),
-        1px 1px 0 var(--background_color_page),
-        0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
+    color: var(--headline_hero_color);
+    line-height: 1;
+    padding-right: 15%;
+    line-height: 55px;
 }
 
-.about_the_play_heading h2 span {
-    font-size: 1.1em;
+.about_the_play_heading_text h1{
+    font-family: 'Eagle Lake';
+    font-size: 67.5px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    line-height: 1;
+}
+
+.about_the_play_heading_text h1 span {
+    padding-left: 35%;
 }
 
 .about_the_play_text {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 10px;
+    position: relative;
+    margin: -350px auto 100px auto; 
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 10;
     font-family: 'Afacad', sans-serif;
-    font-size: 1.1rem;
+    font-size: 20px;
     line-height: 1.6;
-    color: #444;
+    color: #333;
 }
 
 .about_the_play_text p {
-    margin-bottom: var(--padding_default);
-    text-align: center; 
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-.about_the_play_text p span {
-    color: var(--accent_blue);
+.about_the_play_text span {
+    font-size: 24px;
     font-weight: 700;
+    color: var(--text_highlight_blue);
+}
+
+.part_two_area {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    margin-bottom: 50px;
+}
+
+.drama_section {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 1000px;
+    background-color: transparent; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drama_section > img:first-child {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.brothers_ground_img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    max-width: 600px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dragon_cliff_img {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 45%;
+    max-width: 800px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.brothers_ground_img img, 
+.dragon_cliff_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.drama_section p {
+    position: absolute;
+    font-family: 'Eagle Lake', serif;
+    font-size: 63px; 
+    color: #000; 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.276); 
+    z-index: 10;
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out; 
+    cursor: default;
+    width: 100%;
+    max-width: 600px;
+    pointer-events: none;
+}
+
+.drama_section p:nth-of-type(1) {
+    top: 45%;
+    left: 35%; 
+    transform: translate(-50%, -50%);
+}
+
+.drama_section p:nth-of-type(2) {
+    top: 75%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.drama_section:hover p {
+    opacity: 1; 
+}
+
+.about_page_ticket_section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: none;
+    padding: 50px 0 150px 0;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.cherry_dove_img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cherry_dove_img img {
+    width: 140%;
+    max-width: 1200px;
+    margin-left: -100px;
+    object-fit: contain;
+}
+
+.about_page_ticket_details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.about_page_ticket_details h6 {
+    font-family: 'Eagle Lake', serif;
+    font-size: 3.5rem;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about_page_ticket_details h6 span {
+    display: block;
+    font-size: 2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.about_page_ticket_details_grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.3rem;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.about_page_ticket_details_button button {
+    background-color: var(--clicked_color_navigation);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 350px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_page_ticket_details_button a {
+    color: var(--white_color);
+    text-decoration: none;
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about_page_ticket_details_button button:hover {
+    background-color: var(--headline_hero_color);
+}
+
+.about_page_ticket_details > img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1600px;
+    height: auto;
 }
 
 /* contact page */
 .contact_about {
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     max-width: 1200px;     
@@ -555,13 +819,11 @@ body, html{
     padding: 130px 0 20px 0;       
     gap: 20px;
     align-items: center;
-
 }
 
 .about_text {
     grid-column: 1 / span 12;
     text-align: center;
-    
 }
 
 .about_text h2 {
@@ -570,7 +832,6 @@ body, html{
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 
 .text_about_block {
@@ -580,7 +841,6 @@ body, html{
     gap: 30px;
     font-size: 20px;
     font-family: 'Afacad';
-
 }
 
 /* carousel section */
@@ -589,7 +849,6 @@ body, html{
     margin: 0 auto;
     padding: 10px 0;
     position: relative;
-
 }
 
 .photo_carousel input {
@@ -665,7 +924,6 @@ body, html{
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 3;
-
 }
 
 
@@ -678,7 +936,6 @@ body, html{
     height: 70px;
     line-height: 48px;
     text-align: center;
-
 }
 
 
@@ -712,7 +969,6 @@ body, html{
     height: 13px;
     margin: 0 5px;
     border-radius: 7px;
-   
 }
 
 #photo1:checked ~ .dots .dot1,
@@ -728,19 +984,19 @@ body, html{
 /* donation section */
 
 .section_breaker img {
-display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 10px  0;       
-    gap: 20px;
-    align-items: center;     
+    width: 90%;
+    max-width: var(--width-12col);
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;   
 }
 
 .about_text_donation {
     grid-column: 1 / span 12;
     text-align: center;
-    
 }
 
 .about_text_donation h2 {
@@ -749,7 +1005,6 @@ display: grid;
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 .donation {
     display: grid;
@@ -757,9 +1012,8 @@ display: grid;
     max-width: 1200px;
     margin: 0 auto; 
     gap: 20px;
-
-   
 }
+
 .image_text_donation {
  grid-column: 2 / span 11;
  display: grid;
@@ -773,9 +1027,7 @@ grid-column: 2 / span 4;
    width: 100%;
    max-width: 400px;
     height: auto;
-    display: block;
-
-   
+    display: block; 
 }
 
 .text_about_block_donation {
@@ -786,8 +1038,6 @@ grid-column: 2 / span 4;
     font-size: 20px;
     font-family: 'Afacad';
     padding: 80px 0 30px 0;
-
-    
 }
 
 .dragon_text {
@@ -810,8 +1060,8 @@ grid-column: 2 / span 4;
     bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
-display: flex; 
-flex-direction: column;   
+    display: flex; 
+    flex-direction: column;   
     gap: 10px;
 
 }
@@ -821,16 +1071,11 @@ flex-direction: column;
     font-size: 16px;
     font-weight: 400;
     color: var(--ticket_font_color);
-    
-
 }
-
-
 
 .donation_text_dragon_button {
      display: flex;
     justify-content: center;
-
 }
 
 .donation_text_dragon_button button {
@@ -853,7 +1098,6 @@ flex-direction: column;
 
 .donation_text_dragon_button button:hover {
     background-color: var(--headline_hero_color);
-
 }
 
 /* carousel 2 */
@@ -883,13 +1127,11 @@ gap: 20px;
 width: 50%;
 padding: 90px;
 box-sizing: border-box;
-
 }
 
 .carousel_block img {
  width: 130px;
  height: auto;
-
 }
 
 .carousel_text {
@@ -939,7 +1181,6 @@ font-size: 25px;
   height: 12px;
   border-radius: 50%;
   background: #d3d2d2;
- 
 }
 
 #block_a:checked ~ .carousel__image_text_dots .dot_a,
@@ -963,7 +1204,7 @@ font-size: 25px;
 }
 
 .grid_tickets_venue {
-    width: var(--width_full);
+width: var(--width_full);
     max-width: var(--width-12col);
     margin: 0 auto;
     
@@ -971,35 +1212,36 @@ font-size: 25px;
 
 .top_area {
 
-    margin-top: 100px;
+    margin-top: 120px;
 }
-
 
 /* venue area */
 
 .venue_text {
+    
+    grid-column: 1 / span 12;
     text-align: center;
+
 }
 
 .venue_text h2 {
   
     font-family: 'Eagle Lake';
-    font-size: 64px;
+    font-size: 50px;
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 
 /* map area */
 
 .map_container {
- display: grid;
+display: grid;
  grid-template-columns: repeat(12, 1fr);   
 }
 
 .map {
-    grid-column: 2/ span 4;
+grid-column: 2/ span 4;
     margin-top: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     border-radius: 12px;  
@@ -1009,26 +1251,20 @@ font-size: 25px;
 /* detail area */
 
 .details_section {
-    
-    display: flex;
-    justify-content: right;
-    margin-right: 150px;  
-    margin-right: flex-start;
-    
+    flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
+    /* ... other styles ... */
+}
 
-    
+.map_pic img {
+    height: 427px;
+    width:422px;
 }
 
 
-.venue_info_container {
-   
-    padding-top: 0;
-    text-align: center; 
-    margin-top: -300px;
-}
+/* .venue_info_container {} */
 
 .venue_info_container h2 {
-    font-family: 'eagle lake';
+ font-family: 'Eagle Lake';
     font-size: 36px;
     font-weight: 200;
 }
@@ -1060,14 +1296,8 @@ font-size: 25px;
 }
 
 .google_maps_button {
-    margin-top: 30px;
-    grid-column: 8/11;
-    background-color: var(--clicked_color_navigation);
-    border-radius: 10px;
-    height: 45px;
-    width: 250px;
-    border: none;
 
+    
 }
 
 
@@ -1140,7 +1370,8 @@ font-size: 25px;
 
 
 /*responsive start*/
-@media (max-width: 675px) {
+@media (max-width: 850px) {
+    /*homepage start*/
     .container { 
         width: 100%; 
     }
@@ -1168,7 +1399,7 @@ font-size: 25px;
         top: 0;
         z-index: 10;
         width: 150px;
-        height: 350px;
+        height: 410px;
         background-color: var(--popup_navigation);
         transition: 0.75s ease-in-out;
     }
@@ -1319,6 +1550,10 @@ font-size: 25px;
     }
     /*quote area end*/
     /*footer area end*/
+    .footer {
+        height: auto;
+    }
+    
     .footer_info{
         width: 100%;
         top: 100%;
@@ -1380,17 +1615,227 @@ font-size: 25px;
         text-decoration: none;
     }
     
+    .footer_info_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        gap: 40px;
+    }
+
     .footer_info2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        padding-left: 20px;
     }
     /*footer area end*/
+    /*homepage end*/
+    /*about page start*/
+    .desktop_horses {
+        display: none;
+    }
+
+    .mobile_horses {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .about_the_play_img_02  {
+        top: 5%;           
+        left:80%;          
+        margin-left: 0; 
+    }
+
+    .about_the_play_heading_text {
+        top: 7%;
+        left: 60%;
+    }
+
+    .about_the_play_heading_text h2 {
+        font-size: 32px;
+        padding-right: 10%;
+        line-height: 36px
+    }
+
+    .about_the_play_heading_text h1 {
+        font-size: 48px
+    }
+
+    .about_the_play_heading_text h1 span {
+        font-size: 48px
+    }
+
+    .about_the_play_text {
+        width: 55%;
+        top: 47%;
+        left: 60%;
+    }
+
+    .about_the_play_text p {
+        font-size: 12px;
+    }
+
+    .about_the_play_text p span {
+        font-size: 16px
+    }
+
+    .about_the_play_heading  {
+        margin-bottom: 0;
+        min-height: 700px;
+    }
+
+    .drama_section p {
+        font-size: 32px;
+    }
+
+    .drama_section {
+        height: 800px;
+    }
+
+    .about_page_ticket_section  {
+        flex-direction: row-reverse;
+        padding-left: 20px;
+    }
+
+    .cherry_dove_img {
+        justify-content: flex-end;
+    }
+
+    .cherry_dove_img img {
+        transform: scaleX(-1);
+        max-width: 100%;
+    }
+
+    .about_page_ticket_details h6 {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .about_page_ticket_details h6 span {
+        font-size: 15px;
+    }
+
+    .about_page_ticket_details_column1 , .about_page_ticket_details_column2 {
+        padding-left: 20px;
+    }
+
+    .about_page_ticket_details_column1 p, .about_page_ticket_details_column2 p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .about_page_ticket_details_column1 p span, .about_page_ticket_details_column2 p span {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .about_page_ticket_details_grid {
+        margin: 20px auto;
+        gap: 0;
+        line-height: 25px;
+    }
+
+    .about_page_ticket_details_button a {
+        font-size: 14px;
+    }
+
+    .about_page_ticket_details_button button {
+        width: 290px;
+        padding: 15px 0;
+    }
+    /*about page end*/
+    /*contact page start*/
+    .photo_carousel_item img  {
+        max-width: 350px;
+    }
+
+    .photo_carousel_item  {
+        padding: 50px 50px 20px 50px
+    }
+
+    .dots {
+        margin-top: 0;
+    }
+
+    .photo_carousel {
+        max-width: 450px;
+        overflow: hidden;
+    }
+
+    .carousel_text_image {
+        max-width: 450px;
+        overflow: hidden;
+    }
+
+    .overlay {
+        max-width: 1400px;
+    }
+
+    .carousel_block img {
+        max-width: 65px;
+    }
+
+    .about_text h2 {
+        font-size: 35px;
+    }
+
+    .text_about_block {
+        font-size: 12px;
+    }
+
+    .contact_about {
+        padding-top: 60px;
+    }
+
+    .about_text_donation h2 {
+        font-size: 35px;
+    }
+
+    .image_text_donation {
+        display: flex;;
+        flex-direction: row-reverse;
+        max-width: 90%;
+    }
+
+    .text_about_block_donation {
+        font-size: 12px;
+        max-width: 260px;
+    }
+
+    .donation_text_dragon_button button {
+        max-width: 146px;
+        max-height: 28px;
+    }
+
+    .donation_text_dragon {
+        bottom: 30%;
+    }
+
+    .donation_text_dragon h3 {
+        font-size: 12px;
+    }
+
+    .carousel_text h3 {
+        font-size: 17px;
+    }
+
+    .carousel_text p  {
+        font-size: 14px;
+    }
+
+    .section_breaker {
+        max-width: 850px;
+        height: auto;
+    }
+
+    /*contact page end*/
     }
     
 @media (max-width: 475px) {
+    /*home page start*/
     /*header area start*/
     .hero_text h2 {
         font-size: 32px;
@@ -1473,12 +1918,16 @@ font-size: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        top: 115%;
+        top: 112%;
     }
 
     .footer_info_logos {
         padding: 0;
         gap: 30px;
+    }
+
+    .footer_info_right{
+        padding: 0;
     }
 
     .footer_info2 {
@@ -1488,6 +1937,64 @@ font-size: 25px;
     }
 
     /*footer area end*/
+    /*homepage end*/
+    /*about page start*/
+    .about_the_play_heading_text h2 {
+        font-size: 24px;
+        padding-right: 6%;
+        line-height: 25px
+    }
+
+    .about_the_play_heading_text h1 {
+        font-size: 32px
+    }
+
+    .about_the_play_heading_text h1 span {
+        font-size: 32px
+    }
+
+    .about_page_ticket_details h6 {
+        font-size: 18px;
+    }
+
+    .about_page_ticket_details h6 span {
+        font-size: 12px;
+    }
+
+    .about_page_ticket_details_column1 , .about_page_ticket_details_column2 {
+        padding-left: 0px;
+    }
+
+    .about_page_ticket_details_column1 p, .about_page_ticket_details_column2 p {
+        font-size: 8px;
+        font-weight: 300;
+    }
+
+    .about_page_ticket_details_column1 p span, .about_page_ticket_details_column2 p span {
+    font-size: 8px;
+    font-weight: 500;
+    }
+
+    .about_page_ticket_details_button a {
+        font-size: 8px;
+    }
+
+    .about_page_ticket_details_button button {
+        width: 200px;
+        padding: 5px 0;
+    }
+
+    .cherry_dove_img img {
+        max-width: 100%;
+    }
+    /*about page end*/
+    /*contact page start*/
+    .image_text_donation {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    /*contact page end*/
     }
 /*responsive end*/
 
