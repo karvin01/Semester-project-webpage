@@ -963,7 +963,7 @@ font-size: 25px;
 }
 
 .grid_tickets_venue {
-width: var(--width_full);
+    width: var(--width_full);
     max-width: var(--width-12col);
     margin: 0 auto;
     
@@ -994,12 +994,12 @@ width: var(--width_full);
 /* map area */
 
 .map_container {
-display: grid;
+ display: grid;
  grid-template-columns: repeat(12, 1fr);   
 }
 
 .map {
-grid-column: 2/ span 4;
+    grid-column: 2/ span 4;
     margin-top: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     border-radius: 12px;  
@@ -1060,9 +1060,72 @@ grid-column: 2/ span 4;
 }
 
 .google_maps_button {
+    margin-top: 30px;
+    grid-column: 8/11;
+    background-color: var(--clicked_color_navigation);
+    border-radius: 10px;
+    height: 45px;
+    width: 250px;
+    border: none;
 
-    
 }
+
+
+.google_maps_button a {
+    font-family: 'Afacad';
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:var(--ticket_button_color) ;
+    text-decoration: none;
+}
+
+/* info section  */
+
+.info_section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);  
+  row-gap: 40px;
+  padding: 60px 0;
+  
+}
+
+.info_item {
+  display: contents; 
+}
+
+.info_icon {
+  grid-column: 2;     
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+}
+
+.info_text {
+  grid-column: 3/7;     
+  
+}
+
+.info_text h3 {
+  font-family: 'Eagle Lake';
+  font-size: 28px;
+  margin: 0 0 10px 0;
+}
+
+.info_text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.info_text li {
+  font-family: 'Afacad';
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+ 
+
 
 
 /*responsive start*/
