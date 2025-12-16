@@ -1196,17 +1196,13 @@ font-size: 25px;
 
 /* tickets page */
 
-.grid_tickets {
-    width: var(--width_full);
-    max-width: var(--width-12col);
-    margin: 0 auto;
-
-}
 
 .grid_tickets_venue {
-width: var(--width_full);
-    max-width: var(--width-12col);
-    margin: 0 auto;
+ display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  max-width: var(--width-12col);
+  margin: 0 auto;
     
 }
 
@@ -1251,8 +1247,8 @@ grid-column: 2/ span 4;
 /* detail area */
 
 .details_section {
-    flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
-    /* ... other styles ... */
+grid-column: 7/ span 4;
+margin-top: 90px;
 }
 
 .map_pic img {
@@ -1269,15 +1265,14 @@ grid-column: 2/ span 4;
     font-weight: 200;
 }
 
-.venue_address {
-
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    padding: 5px 0; 
-    margin: 5px 0;
-    margin-top: 30px;
+.venue_address {  
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
 }
+
 .venue_address p {
     font-family: 'afacad';
     font-size: 24px;
@@ -1296,7 +1291,11 @@ grid-column: 2/ span 4;
 }
 
 .google_maps_button {
-
+ background: var(--clicked_color_navigation);
+  border: none;
+  margin-left: 140px;
+  padding: 10px 18px;
+  border-radius: 6px;
     
 }
 
@@ -1313,10 +1312,7 @@ grid-column: 2/ span 4;
 /* info section  */
 
 .info_section {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);  
-  row-gap: 40px;
-  padding: 60px 0;
+  grid-column: 1/ span 4;
   
 }
 
@@ -1357,12 +1353,12 @@ grid-column: 2/ span 4;
 }
 
 .helmet_area {
-  grid-column: 7; /* place it in the right column */
+  grid-column: 7; 
   
 }
 
 .helmet_area img {
-  width: 300px;   /* adjust to match your Figma */
+  width: 300px;  
   height: auto;
 }
 
