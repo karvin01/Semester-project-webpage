@@ -1102,7 +1102,8 @@ font-size: 25px;
 }
 
 .info_text {
-  grid-column: 3/7;     
+  
+    grid-column: 3/7;     
   
 }
 
@@ -1124,7 +1125,17 @@ font-size: 25px;
   line-height: 1.5;
   margin-bottom: 8px;
 }
- 
+
+.helmet_area {
+  grid-column: 7; /* place it in the right column */
+  
+}
+
+.helmet_area img {
+  width: 300px;   /* adjust to match your Figma */
+  height: auto;
+}
+
 
 
 
