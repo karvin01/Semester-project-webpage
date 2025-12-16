@@ -70,6 +70,7 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .navigation.fixed {
@@ -492,62 +493,9 @@ body, html{
 
 /* About Page */
 
-.about_the_play {
-    text-align: center;
-    padding: 100px var(--padding_default) 40px; 
-    background-image: url(../images/header_horses.png);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-}
-
-.about_the_play_heading {
-    margin-bottom: 20px;
-}
-
-.about_the_play_heading h2 {
-    
-    font-family: 'Eagle Lake', serif;
-    font-size: 5rem;
-    line-height: 0.8;
-    font-weight: 400;
-    color: var(--heading_color);
-    text-shadow:
-        -1px -1px 0 var(--background_color_page),
-        1px -1px 0 var(--background_color_page),
-        -1px 1px 0 var(--background_color_page),
-        1px 1px 0 var(--background_color_page),
-        0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
-}
-
-.about_the_play_heading h2 span {
-    font-size: 1.1em;
-}
-
-.about_the_play_text {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 10px;
-    font-family: 'Afacad', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #444;
-}
-
-.about_the_play_text p {
-    margin-bottom: var(--padding_default);
-    text-align: center; 
-}
-
-.about_the_play_text p span {
-    color: var(--accent_blue);
-    font-weight: 700;
-}
 
 /* contact page */
 .contact_about {
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     max-width: 1200px;     
@@ -555,13 +503,11 @@ body, html{
     padding: 130px 0 20px 0;       
     gap: 20px;
     align-items: center;
-
 }
 
 .about_text {
     grid-column: 1 / span 12;
     text-align: center;
-    
 }
 
 .about_text h2 {
@@ -570,7 +516,6 @@ body, html{
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 
 .text_about_block {
@@ -580,7 +525,6 @@ body, html{
     gap: 30px;
     font-size: 20px;
     font-family: 'Afacad';
-
 }
 
 /* carousel section */
@@ -589,7 +533,6 @@ body, html{
     margin: 0 auto;
     padding: 10px 0;
     position: relative;
-
 }
 
 .photo_carousel input {
@@ -665,7 +608,6 @@ body, html{
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 3;
-
 }
 
 
@@ -678,7 +620,6 @@ body, html{
     height: 70px;
     line-height: 48px;
     text-align: center;
-
 }
 
 
@@ -712,7 +653,6 @@ body, html{
     height: 13px;
     margin: 0 5px;
     border-radius: 7px;
-   
 }
 
 #photo1:checked ~ .dots .dot1,
@@ -740,7 +680,6 @@ display: grid;
 .about_text_donation {
     grid-column: 1 / span 12;
     text-align: center;
-    
 }
 
 .about_text_donation h2 {
@@ -749,7 +688,6 @@ display: grid;
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 .donation {
     display: grid;
@@ -757,9 +695,8 @@ display: grid;
     max-width: 1200px;
     margin: 0 auto; 
     gap: 20px;
-
-   
 }
+
 .image_text_donation {
  grid-column: 2 / span 11;
  display: grid;
@@ -773,9 +710,7 @@ grid-column: 2 / span 4;
    width: 100%;
    max-width: 400px;
     height: auto;
-    display: block;
-
-   
+    display: block; 
 }
 
 .text_about_block_donation {
@@ -786,8 +721,6 @@ grid-column: 2 / span 4;
     font-size: 20px;
     font-family: 'Afacad';
     padding: 80px 0 30px 0;
-
-    
 }
 
 .dragon_text {
@@ -810,8 +743,8 @@ grid-column: 2 / span 4;
     bottom: 120px;
     left: 50%;
     transform: translateX(-50%);
-display: flex; 
-flex-direction: column;   
+    display: flex; 
+    flex-direction: column;   
     gap: 10px;
 
 }
@@ -821,16 +754,11 @@ flex-direction: column;
     font-size: 16px;
     font-weight: 400;
     color: var(--ticket_font_color);
-    
-
 }
-
-
 
 .donation_text_dragon_button {
      display: flex;
     justify-content: center;
-
 }
 
 .donation_text_dragon_button button {
@@ -853,7 +781,6 @@ flex-direction: column;
 
 .donation_text_dragon_button button:hover {
     background-color: var(--headline_hero_color);
-
 }
 
 /* carousel 2 */
@@ -883,13 +810,11 @@ gap: 20px;
 width: 50%;
 padding: 90px;
 box-sizing: border-box;
-
 }
 
 .carousel_block img {
  width: 130px;
  height: auto;
-
 }
 
 .carousel_text {
@@ -939,7 +864,6 @@ font-size: 25px;
   height: 12px;
   border-radius: 50%;
   background: #d3d2d2;
- 
 }
 
 #block_a:checked ~ .carousel__image_text_dots .dot_a,
@@ -955,114 +879,62 @@ font-size: 25px;
 
 /* tickets page */
 
-.grid_tickets {
-    width: var(--width_full);
-    max-width: var(--width-12col);
-    margin: 0 auto;
-
-}
-
-.grid_tickets_venue {
-width: var(--width_full);
-    max-width: var(--width-12col);
-    margin: 0 auto;
-    
-}
-
 .top_area {
 
-    margin-top: 100px;
+    margin-top: 120px;
 }
-
 
 /* venue area */
 
 .venue_text {
+    
+    grid-column: 1 / span 12;
     text-align: center;
+
 }
 
 .venue_text h2 {
   
     font-family: 'Eagle Lake';
-    font-size: 64px;
+    font-size: 50px;
     font-weight: 400;
     color: var(--headline_hero_color);
     margin: 0;
-   
 }
 
-/* map area */
-
-.map_container {
-display: grid;
- grid-template-columns: repeat(12, 1fr);   
+.venue_container {
+    display: flex;
+    /* ... other styles ... */
 }
 
-.map {
-grid-column: 2/ span 4;
-    margin-top: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-    border-radius: 12px;  
-    overflow: hidden; 
+.map_section {
+    flex: 0.55; /* Takes up approximately 55% of the card's width */
+    padding: 30px;
 }
-
-/* detail area */
 
 .details_section {
-    
-    display: flex;
-    justify-content: right;
-    margin-right: 150px;  
-    margin-right: flex-start;
-    
+    flex: 0.45; /* Takes up approximately 45% of the card's width (1.0 - 0.55 = 0.45) */
+    /* ... other styles ... */
+}
 
-    
+.map_pic img {
+    height: 427px;
+    width:422px;
 }
 
 
-.venue_info_container {
-   
-    padding-top: 0;
-    text-align: center; 
-    margin-top: -300px;
-}
+/* .venue_info_container {} */
 
 .venue_info_container h2 {
-    font-family: 'eagle lake';
+ font-family: 'Eagle Lake';
     font-size: 36px;
-    font-weight: 200;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
 }
 
-.venue_address {
 
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    padding: 5px 0; 
-    margin: 5px 0;
-    margin-top: 30px;
-}
-.venue_address p {
-    font-family: 'afacad';
-    font-size: 24px;
-    font-weight: 200;
-    text-shadow: none;
-    letter-spacing: 0;
-    
 
-}
-
-.location_icon svg {
-   
-    width: 30px;   
-    height: 30px;  
-    margin-right: 8px;     
-}
-
-.google_maps_button {
-
-    
-}
 
 
 /*responsive start*/
