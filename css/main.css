@@ -378,7 +378,7 @@ body, html{
 
 /*video area*/
 .video_area {
-    width: 100%;
+    width: 95%;
     height: auto;
     background-color:var(--menu_color_navigation) ;
     display: flex;
@@ -984,13 +984,14 @@ body, html{
 /* donation section */
 
 .section_breaker img {
-display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 10px  0;       
-    gap: 20px;
-    align-items: center;     
+    width: 90%;
+    max-width: var(--width-12col);
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;   
 }
 
 .about_text_donation {
@@ -1683,13 +1684,21 @@ grid-column: 2/ span 4;
         max-width: 350px;
     }
 
+    .photo_carousel_item  {
+        padding: 50px 50px 20px 50px
+    }
+
+    .dots {
+        margin-top: 0;
+    }
+
     .photo_carousel {
-        max-width: 350px;
+        max-width: 450px;
         overflow: hidden;
     }
 
     .carousel_text_image {
-        max-width: 350px;
+        max-width: 450px;
         overflow: hidden;
     }
 
@@ -1720,10 +1729,12 @@ grid-column: 2/ span 4;
     .image_text_donation {
         display: flex;;
         flex-direction: row-reverse;
+        max-width: 90%;
     }
 
     .text_about_block_donation {
         font-size: 12px;
+        max-width: 260px;
     }
 
     .donation_text_dragon_button button {
@@ -1732,7 +1743,11 @@ grid-column: 2/ span 4;
     }
 
     .donation_text_dragon {
-        bottom: 160px;
+        bottom: 30%;
+    }
+
+    .donation_text_dragon h3 {
+        font-size: 12px;
     }
 
     .carousel_text h3 {
@@ -1748,10 +1763,6 @@ grid-column: 2/ span 4;
         height: auto;
     }
 
-    .section_breaker img {
-        max-width: 850px;
-        height: auto;
-    }
     /*contact page end*/
     }
     
@@ -1909,6 +1920,13 @@ grid-column: 2/ span 4;
         max-width: 100%;
     }
     /*about page end*/
+    /*contact page start*/
+    .image_text_donation {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    /*contact page end*/
     }
 /*responsive end*/
 
