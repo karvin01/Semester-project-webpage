@@ -1270,7 +1270,7 @@ margin-top: 90px;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 16px 0;
+  margin-top: 50px;
 }
 
 .venue_address p {
@@ -1293,8 +1293,9 @@ margin-top: 90px;
 .google_maps_button {
  background: var(--clicked_color_navigation);
   border: none;
-  margin-left: 140px;
-  padding: 10px 18px;
+  margin-top: 50px;
+  margin-left: 45px;
+  padding: 10px 110px;
   border-radius: 6px;
     
 }
@@ -1312,55 +1313,63 @@ margin-top: 90px;
 /* info section  */
 
 .info_section {
-  grid-column: 1/ span 4;
+    
+   display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 48px;
+  grid-column: 1 / span 9;
   
 }
 
 .info_item {
-  display: contents; 
+   grid-column: 1 / span 8;
+display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
+  padding-bottom: 32px;
+  border-bottom: 4px solid var(--clicked_color_navigation);
 }
 
 .info_icon {
-  grid-column: 2;     
-  width: 60px;
-  height: 60px;
-  margin-top: 5px;
+    grid-column: 2 / span 1;
+  width: 75px;
+  margin-top: 30px;
 }
 
 .info_text {
-  
-    grid-column: 3/7;     
+   grid-column: 4 / span 9;
   
 }
 
 .info_text h3 {
   font-family: 'Eagle Lake';
-  font-size: 28px;
-  margin: 0 0 10px 0;
+  font-size: 36px;
+margin-bottom: 15px;
 }
 
 .info_text ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
+font-family: 'Afacad';
+    padding-left: 30px;
+
 }
 
 .info_text li {
-  font-family: 'Afacad';
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 8px;
 }
 
 .helmet_area {
-  grid-column: 7; 
-  
-}
+  grid-column: 10 / span 3;
+  display: flex;
+  }
+     
 
 .helmet_area img {
-  width: 300px;  
+  max-width: auto; 
   height: auto;
 }
+
+
 
 
 
