@@ -15,6 +15,7 @@
     --clicked_color_navigation: #406AA2;
     --menu_color_navigation: #E1EDF1;
     --background_color_green: #214830;
+    --text_highlight_blue: #406AA2;
     --ticket_font_color: #511100;
     --ticket_button_color: #F5F5F5;
     --headline_hero_color: #000000;
@@ -492,7 +493,288 @@ body, html{
 }
 
 /* About Page */
+.about_the_play_heading {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
 
+.about_the_play_img_01 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about_the_play_img_01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about_the_play_img_02 {
+    position: absolute;
+    top: 17%;           
+    left: 50%;          
+    margin-left: 90px; 
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about_the_play_img_02 img {
+    width: 150px;
+    height: auto;
+}
+
+.about_the_play_heading_text {
+    position: absolute;
+    top: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-12col);
+    left: 50%;
+    transform: translate(-50%);
+    padding-right: 15%;
+    text-shadow: 
+    -2px -2px 0 var(--white_color),
+     2px -2px 0 var(--white_color),
+    -2px  2px 0 var(--white_color),
+     2px  2px 0 var(--white_color);
+}
+
+.about_the_play_heading_text h2{
+    font-family: 'Eagle Lake';
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    line-height: 1;
+    padding-right: 15%;
+    line-height: 55px;
+}
+
+.about_the_play_heading_text h1{
+    font-family: 'Eagle Lake';
+    font-size: 67.5px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    line-height: 1;
+}
+
+.about_the_play_heading_text h1 span {
+    padding-left: 35%;
+}
+
+.about_the_play_text {
+    position: absolute; 
+    top: 65%; 
+    left: 50%;
+    transform: translate(-50%, -10%);
+    
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 10;
+    
+    text-align: justify;
+    font-family: 'Afacad', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about_the_play_text p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about_the_play_text span {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text_highlight_blue);
+}
+
+.part_two_area {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    margin-bottom: 50px;
+}
+
+.drama_section {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-color: transparent; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drama_section > img:first-child {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.brothers_ground_img {
+    position: absolute;
+    left: 0;       
+    bottom: 0;     
+    width: 45%;    
+    max-width: 600px;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.dragon_cliff_img {
+    position: absolute;
+    right: 0;      
+    top: 150px;
+    width: 45%;    
+    max-width: 600px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.brothers_ground_img img, 
+.dragon_cliff_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.drama_section p {
+    position: absolute;
+    font-family: 'Eagle Lake', serif;
+    font-size: 63px; 
+    color: #000; 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.276); 
+    z-index: 10;
+    text-align: center;
+    line-height: 1.2;
+    
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out; 
+    cursor: default;
+}
+
+.drama_section p:nth-of-type(1) {
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.drama_section p:nth-of-type(2) {
+    top: 70%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.drama_section:hover p {
+    opacity: 1; 
+}
+
+.about_page_ticket_section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0 250px 0;
+    margin-top: 50px;
+}
+
+.cherry_dove_img {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cherry_dove_img img {
+    width: 500%;
+    max-width: 1100px;
+    margin-left: -50px;
+    object-fit: contain;
+}
+
+.about_page_ticket_details {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.about_page_ticket_details h6 {
+    font-family: 'Eagle Lake', serif;
+    font-size: 3.5rem;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about_page_ticket_details h6 span {
+    display: block;
+    font-size: 2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.about_page_ticket_details_grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.3rem;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.about_page_ticket_details_button button {
+    background-color: var(--clicked_color_navigation);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 350px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about_page_ticket_details_button a {
+    color: var(--white_color);
+    text-decoration: none;
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about_page_ticket_details_button button:hover {
+    background-color: var(--headline_hero_color);
+}
+
+.about_page_ticket_details > img {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+}
 
 /* contact page */
 .contact_about {
