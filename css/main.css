@@ -955,6 +955,20 @@ font-size: 25px;
 
 /* tickets page */
 
+.grid_tickets {
+    width: var(--width_full);
+    max-width: var(--width-12col);
+    margin: 0 auto;
+
+}
+
+.grid_tickets_venue {
+width: var(--width_full);
+    max-width: var(--width-12col);
+    margin: 0 auto;
+    
+}
+
 .top_area {
 
     margin-top: 100px;
@@ -980,16 +994,12 @@ font-size: 25px;
 /* map area */
 
 .map_container {
-
-    display: flex;
-    align-items: center;
-    
-    
+display: grid;
+ grid-template-columns: repeat(12, 1fr);   
 }
 
 .map {
-
-    margin-left: 280px;
+grid-column: 2/ span 4;
     margin-top: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
     border-radius: 12px;  
