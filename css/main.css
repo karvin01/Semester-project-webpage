@@ -1198,11 +1198,9 @@ font-size: 25px;
 
 
 .grid_tickets_venue {
- display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-  max-width: var(--width-12col);
-  margin: 0 auto;
+    width: 100%;
+    max-width: var(--width-12col);
+    margin: 0 auto;
     
 }
 
@@ -1359,9 +1357,10 @@ font-family: 'Afacad';
 }
 
 .helmet_area {
-  grid-column: 10 / span 3;
-  display: flex;
-  }
+    grid-column: 10 / span 3;
+    grid-row: 1/ span 3;
+    align-self: center;
+}
      
 
 .helmet_area img {
@@ -1550,7 +1549,7 @@ font-family: 'Afacad';
     }
 
     .quote_area p {
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 0;
     }
     /*quote area end*/
@@ -1837,6 +1836,74 @@ font-family: 'Afacad';
     }
 
     /*contact page end*/
+    /*tickets page start*/
+    .top_area {
+        margin: 0;
+    }
+
+    .venue_text h2 {
+        font-size: 35px;
+    }
+
+
+    .venue_and_map_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map_container {
+        display: flex;
+        max-width: 90%;
+        align-items: center;
+    }
+
+    .map {
+        max-width: 260px;
+        max-height: 260px;
+    }
+
+    .details_section {
+        margin-top: 0;
+        padding-left: 40px;
+    }
+
+    .venue_info_container  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .google_maps_button {
+        margin-left: 0;
+    }
+
+    .venue_info_container h2 {
+        font-size: 24px;
+    }
+
+    .info_text h3 {
+        font-size: 16px;
+    }
+
+    .info_text li {
+        font-size: 12px;
+        margin-left: -20px;
+    }
+
+    .info_icon {
+        max-width: 43px;
+    }
+
+    .info_item {
+        grid-column: 1/ span 7;
+    }
+
+    .helmet_area img {
+        max-height: 300px;
+    }
+    /*tickets page end*/
     }
     
 @media (max-width: 475px) {
@@ -2000,6 +2067,27 @@ font-family: 'Afacad';
         gap: 0;
     }
     /*contact page end*/
+    /*ticket page start*/
+    .helmet_area{
+        display: none;
+    }
+
+    .map_container {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .map {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .details_section{
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    /*ticket page end*/
     }
 /*responsive end*/
 
