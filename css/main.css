@@ -1595,19 +1595,20 @@ font-family: 'Afacad';
     }
 
     .footer_info_button_donate {
-        display: block;
+        display: flex;
         background-color: var(--clicked_color_navigation);
         border-radius: 10px;
         height: 45px;
-        width: 250px;
+        width: 200px;
         border: none;
+        justify-content: center;
     }
 
     .footer_info_button_donate button {
         background-color: var(--clicked_color_navigation);
         border-radius: 10px;
         height: 45px;
-        width: 250px;
+        width: 200px;
         border: none;
     }
 
@@ -1633,6 +1634,11 @@ font-family: 'Afacad';
         flex-direction: column;
         align-items: center;
         gap: 50px;
+    }
+
+    }
+    .footer_info_button button {
+        max-width: 200px;
     }
     /*footer area end*/
     /*homepage end*/
